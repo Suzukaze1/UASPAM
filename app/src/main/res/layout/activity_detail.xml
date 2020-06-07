@@ -10,6 +10,15 @@
         android:id="@+id/ll001"
         android:layout_width="match_parent"
         android:layout_height="210dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:fabSize="mini"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         
         <ImageView
             android:scaleType="fitXY"
