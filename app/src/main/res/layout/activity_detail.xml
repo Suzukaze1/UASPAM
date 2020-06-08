@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_main"
     tools:context=".activity.DetailActivity">
 
     <RelativeLayout
@@ -12,6 +13,8 @@
         android:layout_height="210dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:src="@drawable/ic_arrow"
+            android:id="@+id/fabBack"
             app:fabSize="mini"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
@@ -27,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="210dp"
             android:contentDescription="@string/todo" />
-        
+
         <ImageView
             android:id="@+id/iv_poster_path_detail"
             android:layout_marginStart="15dp"

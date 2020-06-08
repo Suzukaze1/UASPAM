@@ -24,6 +24,7 @@
         android:text="@string/film_title"
         android:layout_toEndOf="@id/thumbnail01"
         android:fontFamily="@font/nexabold"
+        android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -35,6 +36,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/thumbnail01"
         android:fontFamily="@font/nexabold"
+        android:textColor="#ffffff"
         android:id="@+id/tvReleaseDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -48,6 +50,7 @@
         android:layout_marginTop="3dp"
         android:layout_toEndOf="@id/thumbnail01"
         android:layout_below="@+id/tvReleaseDate"
+        android:textColor="#ffffff"
         android:fontFamily="@font/nexalight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -69,6 +72,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/ivPopularity"
         android:layout_below="@+id/tvDescription"
+        android:textColor="#ffffff"
         android:layout_width="55dp"
         android:layout_height="wrap_content"/>
 
@@ -79,6 +83,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/tvDescription"
+        android:textColor="#ffffff"
         android:layout_width="55dp"
         android:layout_height="wrap_content"/>
 

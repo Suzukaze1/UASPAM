@@ -1,14 +1,18 @@
 package com.alvinmd.uaspam.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alvinmd.uaspam.R;
 import com.alvinmd.uaspam.model.Result;
 import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_MOVIE = "string_extra";
@@ -16,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
     ImageView ivPosterPath,ivBackdropPath;
     String title,releaseDate,popularity,voteCount,genre,description,backdropPath,posterPath;
     Result result;
+    FloatingActionButton fabBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,7 @@ public class DetailActivity extends AppCompatActivity {
         tvDescription = findViewById(R.id.tvDescriptionDetail);
         ivPosterPath = findViewById(R.id.iv_poster_path_detail);
         ivBackdropPath = findViewById(R.id.iv_backdrop_path);
+        fabBack = findViewById(R.id.fabBack);
 
         result = getIntent().getParcelableExtra(EXTRA_MOVIE);
 
@@ -57,5 +63,20 @@ public class DetailActivity extends AppCompatActivity {
         tvPopularity.setText(popularity);
         tvVoteCount.setText(voteCount);
         tvDescription.setText(description);
+
+        fabBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (android.R.id.home == item.getItemId()){
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

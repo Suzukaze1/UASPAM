@@ -15,4 +15,8 @@
     <solid
         android:color="#ffffff"/>
 
+    <gradient
+        android:startColor="#123456"
+        android:endColor="#973517"/>
+
 </shape>
