@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_MOVIE = "string_extra";
     TextView tvTitle,tvReleaseDate,tvPopularity,tvVoteCount,tvGenre,tvDescription;
     ImageView ivPosterPath,ivBackdropPath;
-    String title,releaseDate,popularity,voteCount,genre,description,backdropPath,posterPath;
+    String title,releaseDate,popularity,voteCount,description,backdropPath,posterPath;
     Result result;
     FloatingActionButton fabBack;
 
@@ -39,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
 
         result = getIntent().getParcelableExtra(EXTRA_MOVIE);
 
+        assert result != null;
         title = result.getOriginalTitle();
         releaseDate = result.getReleaseDate();
         popularity = String.valueOf(result.getPopularity());
